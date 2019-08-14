@@ -5,7 +5,7 @@ import requests, threading, os, time
 with open("usernames.txt", "r+") as f:
     usernames =  f.read().splitlines()
 available = open("available.txt", "w+")
-clear = lambda:os.system("cls")
+clear = lambda:os.system("cls") #Change to clear if executing the file on linux
 count, availableCount, unavailableCount = 0, 0, 0
 headers = {
 "Client-Id":"kimne78kx3ncx6brgo4mv6wki5h1ko"
@@ -28,7 +28,6 @@ def check():
         except:
             count -= 1
             usernames.append(username)
-            print("Error")
 
 
 threads = input("Threads [1-150]: ")
